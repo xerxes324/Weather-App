@@ -1,7 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 html,body{
-    background-color: purple;
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    height: 100%;
 }
 
-h1{
-    font-size: 50px;
+#header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10%;
+    background-color: red;
+}
+
+#maincontent{
+    height:90%;
+    background-color: green;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+#userfields{
+    display: flex;
+}
+
+#searchbar{
+    min-width: 20rem;
+    font-size: 30px; 
+    margin: 0;
+    height: 3rem;
+    border-width: 0px   ;
+}
+
+#magnify
+{
+    width: 3rem;
+    background-color: white;
+}
+
+.weatherContainer-style{
+    margin: 3rem;
+    height: 50%;width: 70%;
+    background-color: rgb(197, 192, 192);
+    border-radius: 15px;
 }
