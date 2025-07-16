@@ -1,10 +1,10 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
+
 html,body{
-    background-color: black;
+    background-color: #2D2D44;
     min-height: 100vh;
     display: flex;
     flex-grow: 1;
@@ -14,16 +14,32 @@ html,body{
 
 #header
 {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10%;
-    background-color: red;
+    height: 5rem;
+    background-color: #171727;
+    color: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
+/* tempunit button styling: */
+#header >:nth-child(2){ 
+    position: absolute;
+    right: 50px;
+    font-size: 30px;
+    min-width: 100px;
+    border-radius: 70px;
+    background-color: #00ff0d;
+    box-shadow: 1px 1px 5px greenyellow;
+}
+
+
 #maincontent{
-    height:90%;
-    background-color: green;
+    min-height: 20rem;
+    background-color: #2D2D44;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -32,7 +48,7 @@ html,body{
 }
 
 #userfields{
-    display: flex;
+    display: flex;  
 }
 
 #searchbar{
@@ -40,18 +56,88 @@ html,body{
     font-size: 30px; 
     margin: 0;
     height: 3rem;
-    border-width: 0px   ;
+    border-width: 0px;
 }
 
 #magnify
 {
+    cursor: pointer;
     width: 3rem;
     background-color: white;
+}
+#magnify:active {
+    box-shadow: 1px 2px 2px white;
 }
 
 .weatherContainer-style{
     margin: 3rem;
-    height: 50%;width: 70%;
-    background-color: rgb(197, 192, 192);
-    border-radius: 15px;
+    height: 20rem;
+    width: 40%;
+    background-color: #3C3C5A;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 70px;
+    border: 5px solid white;
+}
+
+.iconProperties{
+    width: 20px;
+    height: 40px;
+}
+
+#weatherdetails{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: 700;
+}
+
+.weathericon-style{
+    height: 130px;
+    width:60px;
+}
+
+.weatherContainerTop >:first-child, .weatherContainerMiddle>:first-child, .weatherContainerBottom>:first-child{
+    margin-inline-end: auto;
+    margin-left: 5rem;
+}
+
+
+.weatherContainerBottom>:last-child, .weatherContainerMiddle>:last-child{
+    margin-inline-start: auto;
+    margin-right: 5rem;
+}
+
+.weatherContainerTop{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    height: fit-content;
+    font-size: 25px;  
+    padding-right: 5rem;
+
+}
+
+.weatherContainerMiddle{
+    min-height: 30%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 25px;
+    align-items: center;
+    gap: 40px;
+}
+
+
+.weatherContainerBottom{
+    min-height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 25px;
+}
+
+#tempunit:active {
+    box-shadow: 2px 2px 5px #00ff0d;
 }
